@@ -1,0 +1,98 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slide-container {
+    width: 100%;
+    height: 100vh;
+    background: black;
+}
+
+.card-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s ease-in-out;
+}
+
+.image {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    transition: 1s ease-in-out;
+}
+
+.title {
+    position: absolute;
+    color: white;
+    font-size: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0px 0px 20px black;
+    transition: 1s ease-in-out;
+}
+
+.main-container {
+    width: 100%;
+    height: 100vh;
+    padding: 50px 100px;
+}
+
+.form.insert {
+    margin-top: 30px;
+}
+
+.label {
+    display: block;
+    margin-top: 10px;
+    font-size: small;
+}
+
+select, input {
+    width: 300px;
+    padding: 11px 10px;
+    background: 0 0;
+    border: 1px solid #adadad;
+    border-radius: 7px;
+}
+
+.img {
+    width: 384px;
+    height: 216px;
+    display: block;
+    margin-top: 30px;
+    object-fit: cover;
+}
+
+.button.submit {
+    display: block;
+    width: 180px;
+    background-color: #00B241;
+    font-size: medium;
+    font-weight: bold;
+    color: whitesmoke;
+    border: none;
+    padding: 11px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: 3px solid #00B241;
+}
+
+.button.submit:hover {
+    background-color: transparent;
+    color: #00B241;
+    transition: 500ms ease-in-out;
+}

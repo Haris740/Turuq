@@ -1,0 +1,39 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main-container {
+    width: 100%;
+    height: 100vh;
+    padding: 15px;
+}
+
+.slider-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: absolute;
+    /* transition: 1s ease-in-out; */
+}
+
+.card {
+    height: 216px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.image {
+    height: 216px;
+    border-radius: 11px;
+    object-fit: cover;
+    transition: 1s ease-in-out;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turuq Web Magazine</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="main-container">
+        <h1>Turuq Web Magazine</h1>
+        <h3>Upload New Slide</h3>
+        <form method="post" class="form insert">
+            <label for="name" class="label">Post Name</label>
+            <input type="text" name="name" id="name" class="text-input name" autocomplete="off">
+            <label for="link" class="label">Post Link</label>
+            <input type="url" name="link" id="link" class="text-input link">
+            <label for="file" class="label">Post Image</label>
+            <input type="file" accept="image/*" name="image" id="file" class="image-input" onchange="showPic(event);">
+            <img alt="" class="img" id="img">
+            <button type="submit" name="submit" class="button submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function showPic(evt){
+            document.getElementById('img').src = URL.createObjectURL(evt.target.files[0]);
+        }
+    </script>
+</body>
+</html>
