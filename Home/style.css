@@ -141,7 +141,7 @@ hr {
     background-position: center;
     color: whitesmoke;
     text-align: center;
-    animation: blur-up 500ms ease-in-out forwards;
+    animation: blur-up 500ms ease-in-out;
 }
 
 .category {
@@ -360,6 +360,7 @@ hr {
     font-family: Sneak-Regular;
     background-color: #0b5a56;
     color: white;
+    text-align: center;
 }
 
 .subscribe-form {
@@ -453,7 +454,22 @@ hr {
 /* Mobile Device */
 @media screen and (max-width:800px) {
     .nav {
-        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        font-size: 20px;
+        flex-direction: column;
+        align-items: center;
+        background-color: #0b5a56;
+        z-index: 1;
+        border-bottom-right-radius: 100px;
+        transform: translate(-100%, 0vh);
+        transition: 750ms ease-in-out;
+    }
+
+    .opened-menu {
+        transform: translate(0px, 0px);
     }
 
     .article-content {
@@ -470,6 +486,8 @@ hr {
     }
 
     .fa-bars {
+        z-index: 3;
+        position: relative;
         font-size: 25px;
     }
 }
