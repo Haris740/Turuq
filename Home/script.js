@@ -7,6 +7,7 @@ const articleContent = document.getElementById('article-content');
 const shareButton = document.querySelector('.fa-share');
 const sharePost = document.querySelector('.share-post');
 const posts = document.querySelectorAll('.post');
+const menuBtn = document.querySelector('.icon');
 
 // variables
 var prevScrollpos = window.pageYOffset;
@@ -96,3 +97,11 @@ window.onscroll = function () {
         }
     }
 }
+
+menuBtn.addEventListener('click', function () {
+    nav.classList.toggle('opened-menu');
+});
+
+posts[0].addEventListener('click', function () {
+    window.open('./post.html', '_self');
+});
