@@ -1,0 +1,29 @@
+@font-face {
+    font-family: Rachana;
+    src: url('./fonts/Rachana.ttf');
+}
+
+@font-face {
+    font-family: Mosse-Black;
+    src: url('./fonts/mosse-black.ttf');
+}
+
+@font-face {
+    font-family: Sneak-Light;
+    src: url('./fonts/Sneak-Light.otf');
+}
+
+@font-face {
+    font-family: Sneak-Regular;
+    src: url('./fonts/Sneak-Regular.otf');
+}
+
+@font-face {
+    font-family: Sneak-Bold;
+    src: url('./fonts/Sneak-Bold.otf');
+}
+
+@font-face {
+    font-family: Sneak-Black;
+    src: url('./fonts/Sneak-Black.otf');
+}
