@@ -4,8 +4,9 @@ const nav = document.getElementById('nav');
 const content = document.querySelectorAll('.content');
 const articleArea = document.querySelector('.article-area');
 const articleContent = document.getElementById('article-content');
-const shareButton = document.querySelector('.fa-share');
+const shareButton = document.querySelector('.share-main');
 const sharePost = document.querySelector('.share-post');
+const share = document.querySelectorAll('.share');
 const posts = document.querySelectorAll('.post');
 const menuBtn = document.querySelector('.icon');
 
@@ -72,17 +73,17 @@ window.onscroll = function () {
                 arCont.style.transform = 'translate(0,0)';
             }
         }
-        
-            for (let i = 0; i < images.length; i++) {
-                var img = document.getElementById('article-image-' + i);
-                var bodyRect = document.body.getBoundingClientRect();
-                var imgRect = img.getBoundingClientRect();
-        
-                if (currentScrollPos > imgRect.top - bodyRect.top - height + 10) {
-                    img.style.opacity = '1';
-                    img.style.transform = 'translate(0,0)';
-                }
+
+        for (let i = 0; i < images.length; i++) {
+            var img = document.getElementById('article-image-' + i);
+            var bodyRect = document.body.getBoundingClientRect();
+            var imgRect = img.getBoundingClientRect();
+
+            if (currentScrollPos > imgRect.top - bodyRect.top - height + 10) {
+                img.style.opacity = '1';
+                img.style.transform = 'translate(0,0)';
             }
+        }
     }
 
     if (posts.length > 0) {
@@ -100,6 +101,12 @@ window.onscroll = function () {
 
 menuBtn.addEventListener('click', function () {
     nav.classList.toggle('opened-menu');
+});
+
+shareButton.addEventListener('click', function () {
+    for (let i = 0; i < share.length; i++) {
+        share[i].classList.toggle('share-expand-view');
+    }
 });
 
 posts[0].addEventListener('click', function () {
